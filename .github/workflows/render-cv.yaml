@@ -23,7 +23,7 @@ jobs:
 
       - name: Install RenderCV
         run: |
-          pip install "rendercv==2.8"
+          pip install "rendercv[full]==2.8"
 
       - name: Render both CVs (EN + ES)
         run: |
