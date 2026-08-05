@@ -2,6 +2,9 @@
 __pycache__/
 *.py[codz]
 *$py.class
+rendercv_output/
+*.temp*
+.atl
 
 # C extensions
 *.so

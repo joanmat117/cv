@@ -1,0 +1,46 @@
+name: Release a CV
+
+# Fires whenever any of the two CV YAML files changes, renders them and
+# publishes a GitHub release with the generated PDFs (and Typst sources).
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "joan_en_CV.yaml"
+      - "joan_es_CV.yaml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  call_rendercv_workflow:
+    name: RenderCV
+    uses: ./.github/workflows/render-cv.yaml
+
+  build:
+    needs: call_rendercv_workflow
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Download RenderCV Output
+        uses: actions/download-artifact@v4
+        with:
+          name: RenderCV Output
+          path: rendercv_output
+
+      - name: Release
+        uses: softprops/action-gh-release@v2
+        with:
+          # The two PDFs (plus Typst sources). Both CV outputs match these globs.
+          files: |
+            rendercv_output/*_CV.pdf
+            rendercv_output/*_CV.typ
+          # Unique tag per run so each change produces its own release.
+          tag_name: cv-${{ github.run_id }}
+          generate_release_notes: true
+          make_latest: true

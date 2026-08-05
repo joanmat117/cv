@@ -1,0 +1,40 @@
+name: Render a CV
+
+# Renders both CVs and uploads the output as an artifact.
+# Called by the release workflow; also available on manual dispatch.
+
+on:
+  workflow_call: # to make it callable from the release workflow
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  rendercv:
+    name: RenderCV
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install RenderCV
+        run: |
+          pip install "rendercv==2.8"
+
+      - name: Render both CVs (EN + ES)
+        run: |
+          rendercv render "joan_en_CV.yaml"
+          rendercv render "joan_es_CV.yaml"
+
+      - name: List generated output
+        run: ls -la rendercv_output
+
+      - name: Upload rendercv_output as an artefact
+        uses: actions/upload-artifact@v4
+        with:
+          name: RenderCV Output
+          path: rendercv_output
