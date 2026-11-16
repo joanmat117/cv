@@ -16,64 +16,74 @@ cv:
   sections:
     # --- Professional Summary ---
     summary:
-      - Fullstack Developer with 2 years of experience in TypeScript, Next.js and NestJS. Specialized in modular architectures, performance optimization, technical SEO, and advanced authentication systems. Experience in end-to-end projects as the sole frontend developer and in fullstack solutions with AI integration, WebSockets, and Electron.
+      - FullStack Developer with 2 years of experience specialized in TypeScript, React, Next.js, NestJS, and Python. Extensive experience in AI-driven development, language model integration into web applications, payment gateway integration, and automated testing (unit and E2E tests using Cypress, Jest, and Vitest). Proven ability in software architecture, scalable system design, and optimized backend/frontend development (caching with Redis, processing queues, WebSockets, and modular architectures).
 
     # --- Work Experience ---
     experience:
+      # - company: Desoft
+      #   position: Odoo & Frontend Developer
+      #   start_date: 2026-10
+      #   end_date: present
+      #   location: On-site
+      #   highlights:
+      #     - Developed and extended custom Odoo modules using Python, applying design patterns for system maintainability.
+      #     - Refactored legacy code optimizing database queries and reducing code duplication in business logic.
+      #     - Authored technical documentation for RESTful APIs to facilitate intermodular service consumption.
+      #
       - company: Qvazo Market
-        position: Frontend Developer (Part-Time)
+        position: Frontend Developer
         start_date: 2026-03
         end_date: 2026-08
         location: Remote
         highlights:
-          - "Standardized data and interface patterns by defining clear business flows, reducing development by 30% and improving AI effectiveness by narrowing the domain."
-          - "Optimized performance and global SEO by migrating to Server Components and SSR, i18n for 4 languages, reducing JS bundle by 25% and improving LCP by 300 ms."
-          - "Designed a middleware pipeline with dynamic permissions (RBAC) and automatic JWT renewal, reducing session timeouts by 40% and protecting 9 functional modules."
+          - Standardized data patterns and interfaces by scoping the software domain, increasing AI-generated code efficacy and reducing development time by 30%.
+          - Migrated the application to Server Components (Next.js) with i18n for 4 languages, reducing JS bundle by 25% and improving LCP by 300 ms.
+          - Integrated the Tropipay payment gateway for secure financial transaction processing in the e-commerce platform.
+          - Designed a middleware pipeline with dynamic permissions (RBAC) and automatic JWT renewal, protecting 9 modules and reducing session timeouts by 40%.
       - company: Propiedades Aburrá
         position: Frontend Developer (Freelance)
-        date:
         start_date: 2026-01
         end_date: 2026-02
         location: Remote
-        summary:
         highlights:
-          - "Developed a housing price estimator using React 19, Tailwind, shadcn/ui and Zustand"
-          - "Achieved 96/100 on PageSpeed, LCP of 1.0s, zero TBT and CLS of 0.001"
-          - Implemented auto-save in the form with debounced writes, reducing unnecessary renders and syncing data without interrupting the user.
+          - Developed an interactive housing price estimator using React 19, Tailwind CSS, shadcn/ui, and Zustand.
+          - Implemented deferred writing (debounce) in forms to persist data without interrupting user experience or generating unnecessary renders.
+          - Achieved 96/100 PageSpeed performance with LCP of 1.0s, TBT of 0ms, and CLS of 0.001.
 
       - company: Private Community Website
         position: FullStack Developer (Freelance)
-        date:
         start_date: 2024-11
         end_date: 2025-11
         location: Remote
-        summary:
         highlights:
-          - "Developed a community website with React, TailwindCSS and Supabase"
-          - "Built OAuth authentication, custom CMS and image upload to ImageKit"
-          - "Integrated 5 AI chats (Google Gemini), real-time chat and a desktop application with Electron"
+          - Integrated 5 conversational chats based on the Google Gemini API for real-time AI interaction.
+          - Implemented bidirectional real-time communication for chat systems and a cross-platform desktop application with Electron.
+          - Developed a FullStack architecture with React, Tailwind CSS, and Supabase, including OAuth authentication, custom CMS, and multimedia optimization with ImageKit.
 
     # --- Projects ---
     projects:
-      - name: Cryptocurrency Data Backend
-        date:
-        start_date: 2026-02
-        end_date: 2026-04
-        location:
-        summary: REST API for cryptocurrencies developed with NestJS, PostgreSQL (Neon) and Prisma ORM.
+      - name: AI Recruiter
+        summary: Distributed asynchronous backend system for intelligent CV analysis and matching against job vacancies.
         highlights:
-          - "Designed passwordless authentication with secret phrases (argon2id) and JWT rotation, detecting session theft in real-time."
-          - "Implemented hierarchical rate limiting with ThrottlerGuard, protecting sensitive endpoints and blocking brute-force attacks."
+          - Built an evaluation engine with AI agents (LangGraph and LangChain) that processes candidate profiles, validates requirements, and generates structured hiring recommendations.
+          - Designed an asynchronous architecture based on processing queues (BullMQ and Redis) to manage document extraction and AI pipelines at scale.
+          - Integrated relational storage in PostgreSQL using Drizzle ORM structured under Clean Architecture principles and domain isolation.
 
-      - name: Online Bible
-        date:
-        start_date: 2025-10
-        end_date: 2025-11
-        location:
-        summary: Bible reading web application developed with Next.js 14, React 18, Redux Toolkit.
+      - name: Cryptocurrency Data Backend
+        summary: REST API for cryptocurrency analysis built with NestJS, PostgreSQL, and Prisma ORM.
         highlights:
-          - "Refactored to a feature-oriented architecture, isolating 8+ modules by domain and reducing coupling between layers."
-          - Implemented offline persistence with Dexie (IndexedDB) and deep-linking via URL for shareable navigation.
+          - Designed passwordless authentication via secret phrases (argon2id) and JWT token rotation with real-time session theft detection.
+          - Implemented hierarchical rate limiting with ThrottlerGuard to mitigate brute-force attacks on sensitive endpoints.
+
+      # - name: Online Bible
+      #   date:
+      #   start_date: 2025-10
+      #   end_date: 2025-11
+      #   location:
+      #   summary: Bible reading web application developed with Next.js 14, React 18, Redux Toolkit.
+      #   highlights:
+      #     - "Refactored to a feature-oriented architecture, isolating 8+ modules by domain and reducing coupling between layers."
+      #     - Implemented offline persistence with Dexie (IndexedDB) and deep-linking via URL for shareable navigation.
 
       # - name: Energía Ideal
       #   date:
@@ -86,12 +96,16 @@ cv:
 
     # --- Technical Skills ---
     technical_skills:
+      - label: AI & LLMs
+        details: LangChain, LangGraph, RAG, AI-driven development.
       - label: Languages
-        details: TypeScript, JavaScript, SQL, CSS, HTML
-      - label: Frameworks and Libraries
-        details: Next.js, React, NestJS, Express, PostgreSQL, Redux Toolkit, Node.js
-      - label: Tools and Practices
-        details: RESTful APIs, OAuth, Docker, Git, Agile Methodologies
+        details: TypeScript, JavaScript, Python, SQL, CSS, HTML
+      - label: Frontend
+        details: Next.js, React, Astro, Redux, Zustand, Tailwind CSS.
+      - label: Backend
+        details: NestJS, Node.js, Express, WebSockets, BullMQ (Queues), Caching with Redis.
+      - label: Databases & Tools
+        details: PostgreSQL, Drizzle ORM, Prisma ORM, Supabase, Docker, Git.
 
     # --- Languages ---
     languages:
@@ -132,7 +146,7 @@ design:
   #     name: 30pt
   #     headline: 10pt
   #     connections: 10pt
-  #     section_titles: 1.4em
+  #     section_tiers: 1.4em
   #   small_caps:
   #     name: false
   #     headline: false
@@ -145,7 +159,7 @@ design:
   #     section_titles: true
   # links:
   #   underline: false
-  #   show_external_link_icon: false
+  #   show_external_link_link_icon: false
   # header:
   #   alignment: center
   #   photo_width: 3.5cm
@@ -202,7 +216,7 @@ design:
   #     main_column: |-
   #       **INSTITUTION**, AREA
   #       SUMMARY
-  #       HIGHLIGHTS
+      #     HIGHLIGHTS
   #     degree_column: '**DEGREE**'
   #     date_and_location_column: |-
   #       LOCATION
@@ -232,7 +246,7 @@ design:
   #     date_and_location_column: DATE
 
 locale:
-  language: spanish
+  language: english
   # last_updated: Last updated in
   # month: month
   # months: months

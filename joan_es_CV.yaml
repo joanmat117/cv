@@ -16,64 +16,74 @@ cv:
   sections:
     # --- Resumen Profesional ---
     resumen:
-      - Desarrollador Fullstack con 2 años de experiencia en TypeScript, Next.js y NestJS. Especializado en arquitecturas modulares, optimización de rendimiento, SEO técnico y sistemas de autenticación avanzada. Experiencia en proyectos end-to-end como único frontend y en soluciones fullstack con integración de IA, WebSockets y Electron.
+      - Desarrollador FullStack con 2 años de experiencia especializado en TypeScript, React, Next.js, NestJS y Python. Amplia experiencia en desarrollo impulsado por IA, integración de modelos de lenguaje en aplicaciones web, integración de pasarelas de pago y testing automatizado (pruebas unitarias y E2E utilizando Cypress, Jest y Vitest). Demostrada capacidad en arquitectura de software, diseño de sistemas escalables y desarrollo de backend/frontend optimizados (caching con Redis, colas de procesamiento, WebSockets y arquitecturas modulares).
 
     # --- Experiencia Laboral ---
     experiencia:
+      # - company: Desoft
+      #   position: Desarrollador Odoo & Frontend
+      #   start_date: 2026-10
+      #   end_date: present
+      #   location: Presencial
+      #   highlights:
+      #     - Desarrollo y extensión de módulos personalizados en Odoo utilizando Python, aplicando patrones de diseño para la mantenibilidad del sistema.
+      #     - Refactoricé código legacy optimizando consultas a base de datos y reduciendo la duplicación de código en la lógica de negocio.
+      #     - Elaboré la documentación técnica de APIs RESTful para facilitar el consumo de servicios intermodulares.
+      #
       - company: Qvazo Market
-        position: Desarrollador Frontend (Tiempo Parcial)
+        position: Desarrollador Frontend
         start_date: 2026-03
         end_date: 2026-08
         location: Remoto
         highlights:
-          - "Estandaricé patrones de datos e interfaz definiendo flujos de negocio claros, reduciendo el desarrollo un 30% y mejorando eficacia de IA al acotar el dominio."
-          - "Optimicé el rendimiento y SEO global migrando a Server Components y SSR, i18n para 4 idiomas, reduciendo bundle JS un 25% y mejorando LCP en 300 ms."
-          - "Diseñé un pipeline de middleware con permisos dinámicos (RBAC) y renovación automática de JWT, reduciendo timeouts de sesión un 40% y protegiendo 9 módulos funcionales."
+          - Estandaricé patrones de datos e interfaces acotando el dominio de software, lo que incrementó la eficacia del código generado por IA y redujo el tiempo de desarrollo un 30%.
+          - Migré la aplicación a Server Components (Next.js) con i18n para 4 idiomas, reduciendo el bundle JS un 25% y mejorando el LCP en 300 ms.
+          - Integré la pasarela de pagos Tropipay para el procesamiento seguro de transacciones financieras en la plataforma e-commerce.
+          - Diseñé un pipeline de middleware con permisos dinámicos (RBAC) y renovación automática de JWT, protegiendo 9 módulos y reduciendo timeouts de sesión un 40%.
       - company: Propiedades Aburrá
         position: Desarrollador Frontend (Freelance)
-        date:
         start_date: 2026-01
         end_date: 2026-02
         location: Remoto
-        summary:
         highlights:
-          - "Desarrollé un estimador de precios de viviendas usando React 19, Tailwind, shadcn/ui y Zustand"
-          - "Logré 96/100 en PageSpeed, LCP de 1.0s, TBT cero y CLS de 0.001"
-          - Implementé auto-guardado en el formulario con escritura diferida, reduciendo renders innecesarios y sincronizando los datos sin interrumpir al usuario.
+          - Desarrollé un estimador interactivo de precios de vivienda utilizando React 19, Tailwind CSS, shadcn/ui y Zustand.
+          - Implementé escritura diferida (debounce) en formularios para persistir datos sin interrumpir la experiencia de usuario ni generar renders innecesarios.
+          - Logré un rendimiento de 96/100 en PageSpeed con LCP de 1.0s, TBT de 0ms y CLS de 0.001.
 
       - company: Sitio Web de Comunidad Privada
         position: Desarrollador FullStack (Freelance)
-        date:
         start_date: 2024-11
         end_date: 2025-11
         location: Remoto
-        summary:
         highlights:
-          - "Desarrollé un sitio web comunitario con React, TailwindCSS y Supabase"
-          - "Construí autenticación OAuth, CMS personalizado y carga de imágenes a ImageKit"
-          - "Integré 5 chats de IA (Google Gemini), chat en tiempo real y una aplicación de escritorio con Electron"
+          - Integré 5 chats conversacionales basados en la API de Google Gemini para interacción con IA en tiempo real.
+          - Implementé la comunicación bidireccional en tiempo real para los sistemas de chat y una aplicación de escritorio multiplataforma con Electron.
+          - Desarrollé una arquitectura FullStack con React, Tailwind CSS y Supabase, incluyendo autenticación OAuth, CMS personalizado y optimización multimedia con ImageKit.
 
     # --- Proyectos ---
     proyectos:
-      - name: Cryptocurrency Data Backend
-        date:
-        start_date: 2026-02
-        end_date: 2026-04
-        location:
-        summary: API REST para criptomonedas desarrollada con NestJS, PostgreSQL (Neon) y Prisma ORM.
+      - name: AI Recruiter
+        summary: Sistema backend distribuido y asíncrono para el análisis inteligente y emparejamiento de CVs contra vacantes laborales.
         highlights:
-          - "Diseñé autenticación sin contraseñas con secret phrases (argon2id) y rotación de JWT, detectando robo de sesiones en tiempo real."
-          - "Implementé rate limiting jerárquico con ThrottlerGuard, protegiendo endpoints sensibles y bloqueando ataques de fuerza bruta."
+          - Construí un motor de evaluación con agentes de IA (LangGraph y LangChain) que procesa perfiles candidatos, valida requisitos y genera recomendaciones de contratación estructuradas.
+          - Diseñé una arquitectura asíncrona basada en colas de procesamiento (BullMQ y Redis) para gestionar la extracción de documentos y pipelines de IA de forma escalable.
+          - Integré almacenamiento relacional en PostgreSQL utilizando Drizzle ORM estructurado bajo principios de Clean Architecture y aislamiento de dominio.
 
-      - name: Online Bible
-        date:
-        start_date: 2025-10
-        end_date: 2025-11
-        location:
-        summary: Aplicación web de lectura bíblica desarrollada con Next.js 14, React 18, Redux Toolkit.
+      - name: Cryptocurrency Data Backend
+        summary: API REST para análisis de criptomonedas construida con NestJS, PostgreSQL y Prisma ORM.
         highlights:
-          - "Refactoricé a una arquitectura orientada a features, aislando 8+ módulos por dominio y reduciendo el acoplamiento entre capas."
-          - Implementé persistencia offline con Dexie (IndexedDB) y deep-linking vía URL para navegación compartible.
+          - Diseñé autenticación sin contraseñas mediante frases secretas (argon2id) y rotación de tokens JWT con detección de robo de sesión en tiempo real.
+          - Implementé rate limiting jerárquico con ThrottlerGuard para mitigar ataques de fuerza bruta en endpoints sensibles.
+
+      # - name: Online Bible
+      #   date:
+      #   start_date: 2025-10
+      #   end_date: 2025-11
+      #   location:
+      #   summary: Aplicación web de lectura bíblica desarrollada con Next.js 14, React 18, Redux Toolkit.
+      #   highlights:
+      #     - "Refactoricé a una arquitectura orientada a features, aislando 8+ módulos por dominio y reduciendo el acoplamiento entre capas."
+      #     - Implementé persistencia offline con Dexie (IndexedDB) y deep-linking vía URL para navegación compartible.
 
       # - name: Energía Ideal
       #   date:
@@ -86,12 +96,16 @@ cv:
 
     # --- Habilidades Técnicas ---
     Habilidades Técnicas:
+      - label: AI & LLMs
+        details: LangChain, LangGraph, RAG, Desarrollo impulsado por IA.
       - label: Lenguajes
-        details: TypeScript, JavaScript, SQL, CSS, HTML
-      - label: Frameworks y Librerías
-        details: Next.js, React, NestJS, Express, PostgreSQL, Redux Toolkit, Node.js
-      - label: Herramientas y Prácticas
-        details: APIs RESTful, OAuth, Docker, Git, Metodologías Ágiles
+        details: TypeScript, JavaScript, Python, SQL, CSS, HTML
+      - label: Frontend
+        details: Next.js, React, Astro, Redux, Zustand, Tailwind CSS.
+      - label: Backend
+        details: NestJS, Node.js, Express, WebSockets, BullMQ (Colas), Caching con Redis.
+      - label: Bases de Datos & Herramientas
+        details: PostgreSQL, Drizzle ORM, Prisma ORM, Supabase, Docker, Git.
 
     # --- Idiomas ---
     idiomas:
